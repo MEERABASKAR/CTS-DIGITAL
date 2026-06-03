@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevTools Debug Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        nav {
+            display: flex;
+            background-color: lightblue;
+        }
+
+        nav a {
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        img {
+            width: 400px; /* can break layout on small screens */
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <h2>Community Portal</h2>
+
+    <img src="https://via.placeholder.com/400">
+
+</body>
+</html>
