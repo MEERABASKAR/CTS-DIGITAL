@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Community Event Portal</title>
+
+    <style>
+        body {
+            font-family: Times New Roman;
+        }
+
+        form {
+            width: 320px;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, select {
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        output {
+            display: block;
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2>Community Event Registration</h2>
+
+<form onsubmit="result.value='Thank you! You have successfully registered for the event.'; return false;">
+
+    <!-- Name -->
+    <label>Name:</label>
+    <input type="text" placeholder="Enter your name" required autofocus>
+
+    <!-- Email -->
+    <label>Email:</label>
+    <input type="email" placeholder="Enter your email" required>
+
+    <!-- Date -->
+    <label>Event Date:</label>
+    <input type="date" required>
+
+    <!-- Event Type -->
+    <label>Event Type:</label>
+    <select required>
+        <option value="">Select Event</option>
+        <option>Workshop</option>
+        <option>Seminar</option>
+        <option>Cultural Program</option>
+        <option>Community Meeting</option>
+    </select>
+
+    <!-- Submit -->
+    <button type="submit">Register</button>
+
+    <!-- Output -->
+    <output id="result"></output>
+
+</form>
+
+</body>
+</html>

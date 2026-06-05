@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Feedback</title>
+
+<script>
+function checkPhone() {
+    let p = document.getElementById("phone").value;
+    if (p.length != 10) alert("Enter 10 digits");
+}
+
+function showFee() {
+    let e = document.getElementById("event").value;
+    document.getElementById("fee").innerHTML = "Fee: " + e;
+}
+
+function submitMsg() {
+    alert("Submitted!");
+}
+
+function zoom(img) {
+    img.width = 200;
+}
+
+function count() {
+    let t = document.getElementById("fb").value;
+    document.getElementById("c").innerHTML = t.length;
+}
+</script>
+
+</head>
+
+<body>
+
+<form>
+
+Phone:
+<input type="text" id="phone" onblur="checkPhone()"><br><br>
+
+Event:
+<select id="event" onchange="showFee()">
+<option>100</option>
+<option>200</option>
+<option>300</option>
+</select>
+<p id="fee"></p>
+
+<img src="https://via.placeholder.com/100" ondblclick="zoom(this)"><br><br>
+
+Feedback:
+<textarea id="fb" onkeyup="count()"></textarea>
+<p>Count: <span id="c">0</span></p>
+
+<button type="button" onclick="submitMsg()">Submit</button>
+
+</form>
+
+</body>
+</html>
